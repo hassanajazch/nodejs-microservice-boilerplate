@@ -6,6 +6,7 @@
 3. **Install Node Packages.** - `npm install`
 4. **Run the app.** - `npm run dev`
 
+###---------- Project Details ----------
 
 ## Structure
 - Separate app and server
@@ -13,7 +14,7 @@
 
 ## Code Style
 - Use eslint to maintain code standards
-- Use prettier to keep code format same
+- Use prettier to keep code format same across all team
 - Use proper naming convention (No use of result, abc named variables)
 - Use all ES6 features
 
@@ -22,6 +23,6 @@
 - Use AAA pattern for writing your tests
  
  
- Inspiration:
- Yoni Goldberg https://github.com/i0natan/nodebestpractices
- Sahat https://github.com/sahat/hackathon-starter
+##Inspiration:
+- Yoni Goldberg https://github.com/i0natan/nodebestpractices
+- Sahat https://github.com/sahat/hackathon-starter
