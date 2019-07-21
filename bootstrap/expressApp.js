@@ -26,7 +26,6 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 
-app.use(passport.initialize());
 // multipart data handling
 const storage = multer.diskStorage({
     destination: config.filePath,
@@ -34,6 +33,7 @@ const storage = multer.diskStorage({
         cb(null, shortId.generate());
     }
 });
+
 app.use(multer({storage: storage}).any());
 app.use(logger('dev'));
 
