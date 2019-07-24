@@ -1,4 +1,3 @@
-const passport = require('passport');
 const express = require('express');
 const session = require('express-session');
 const logger = require('morgan');
@@ -15,7 +14,7 @@ app.set('view engine', 'pug');
 
 app.set('trust proxy', 1); // trust first proxy
 app.use(session({
-    secret: 'keyboard cat',
+  secret: 'keyboard cat',
     resave: false,
     saveUninitialized: true,
     cookie: {}
