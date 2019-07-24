@@ -6,7 +6,7 @@
 3. **Install Node Packages.** - `npm install`
 4. **Run the app.** - `npm run dev`
 
-###---------- Project Details ----------
+### ------------- Project Details -------------
 
 ## Structure
 - Separate app and server
@@ -23,6 +23,6 @@
 - Use AAA pattern for writing your tests
  
  
-##Inspiration:
+### Inspiration:
 - Yoni Goldberg https://github.com/i0natan/nodebestpractices
 - Sahat https://github.com/sahat/hackathon-starter
