@@ -1,12 +1,13 @@
 {
-  "name": "lunchon",
+  "name": "nodejs-microservice-boilerplate",
   "preferGlobal": true,
-  "bin": "./bin/consoleCommands.js",
-  "version": "1.0.0",
-  "main": "routes/index.js",
   "scripts": {
-    "start": "nodemon -r esm index.js",
-    "lint": "eslint --format codeframe index.js controllers/** app/**",
+    "prestart": "npm run -s build",
+    "start": "node dist/index.js",
+    "dev": "nodemon -r esm src/index.js",
+    "clean": "rimraf dist",
+    "build": "npm run clean && mkdir -p dist && babel src -s -D -d dist",
+    "lint": "eslint --format codeframe src/index.js src/controllers/** app/**",
     "migrate": "sequelize db:migrate",
     "seed": "sequelize db:seed:all",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -34,11 +35,16 @@
     "sequelize": "^4.43.0",
     "shortid": "^2.2.14",
     "urlencode": "^1.1.0",
-    "uuid": "^3.3.2"
+    "uuid": "^3.3.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1"
   },
   "keywords": [],
   "description": "",
   "devDependencies": {
+    "babel-register": "^6.26.0",
     "@types/gapi": "0.0.36",
     "chai": "^4.2.0",
     "cross-env": "^5.2.0",
@@ -52,5 +58,21 @@
     "nodemon": "^1.18.10",
     "prettier": "^1.18.2",
     "sequelize-cli": "^5.4.0"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ],
+    "plugins": [
+      "transform-object-rest-spread",
+      "transform-class-properties"
+    ]
   }
 }

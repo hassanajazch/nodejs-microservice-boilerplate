@@ -1,6 +1,6 @@
 require('dotenv').config();
 
-module.exports = {
+const config = {
     env: process.env.NODE_ENV,
     port: process.env.PORT || 3000,
     mysql: {
@@ -13,3 +13,5 @@ module.exports = {
         operatorsAliases: false
     }
 };
+
+export default config;

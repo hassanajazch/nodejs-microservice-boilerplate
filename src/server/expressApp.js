@@ -1,12 +1,11 @@
-const express = require('express');
-const session = require('express-session');
-const logger = require('morgan');
-const bodyParser = require('body-parser');
-const multer = require('multer');
-const cors = require('cors');
-const shortId = require('shortid');
-
-const config = require('../config/config');
+import express from 'express';
+import session from 'express-session';
+import logger from 'morgan';
+import bodyParser from 'body-parser';
+import multer from 'multer';
+import cors from 'cors';
+import shortId from 'shortid';
+import config from '../config/config';
 
 const app = express();
 app.use(cors());
@@ -37,4 +36,4 @@ const storage = multer.diskStorage({
 app.use(multer({ storage }).any());
 app.use(logger('dev'));
 
-module.exports = app;
+export default app;

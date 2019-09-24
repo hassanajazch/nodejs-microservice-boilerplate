@@ -2,15 +2,19 @@
 
 ## Get Started
 1. **Install [Node]
-2. **Clone this repository.** - `git clone https://github.com/hassanajazch/react-app`
+2. **Clone this repository.** - `git clone https://github.com/hassanajazch/nodejs-microservice-boilerplate.git`
 3. **Install Node Packages.** - `npm install`
-4. **Run the app.** - `npm start`
+4. **Run the app for development.** - `npm run dev`
+5. **Create and build app for production.** - `npm start`
 
 ### ------------- Project Details -------------
+Boilerplate for Node.js applications.
 
 ## Structure
 - Separate app and server
 - Usage of patterns [factories and adapters]
+- Separate route and controller file for different categories
+- keep all business logic in src/app folder
 
 ## Code Style
 - Use eslint to maintain code standards
