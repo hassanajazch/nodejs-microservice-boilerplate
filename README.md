@@ -9,12 +9,17 @@
 
 ### ------------- Project Details -------------
 Boilerplate for Node.js applications.
+- Sequelize ORM for MySQL queries
+- dotenv for loading env variables
+- ESM and Babel for using ES6 features
+- JEST for testing
 
 ## Structure
 - Separate app and server
 - Usage of patterns [factories and adapters]
 - Separate route and controller file for different categories
 - keep all business logic in src/app folder
+- Single Responsibility
 
 ## Code Style
 - Use eslint to maintain code standards

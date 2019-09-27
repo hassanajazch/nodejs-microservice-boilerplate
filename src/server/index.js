@@ -1,5 +1,5 @@
 import app from './expressApp';
-require('./routes');
+import './routes';
 const server = require('http').Server(app);
 
 export default server;
